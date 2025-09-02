@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Benim Linklerim</title>
+  <meta name="description" content="Tüm bağlantılarım tek sayfada.">
+  <style>
+    :root { --bg:#0f1115; --card:#151923; --text:#eaeefb; --muted:#9aa3b2; --btn:#1f2533; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial;background:radial-gradient(80% 60% at 50% 0%,#1a2030 0%,var(--bg) 50%);color:var(--text);display:grid;min-height:100dvh;place-items:center;padding:24px}
+    .wrap{width:100%;max-width:560px}
+    .card{background:var(--card);border-radius:20px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .pf{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+    .pf img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+    h1{font-size:22px;margin:0}
+    p{margin:4px 0 0;color:var(--muted)}
+    .links{display:grid;gap:12px;margin-top:18px}
+    .links a{display:block;text-decoration:none;background:var(--btn);color:var(--text);padding:14px 16px;border-radius:14px;text-align:center;font-weight:600;border:1px solid #2a3245;transition:transform .08s ease}
+    .links a:hover{transform:translateY(-2px)}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="pf">
+        <img src="https://avatars.githubusercontent.com/u/9919" alt="profil"> <!-- Kendi görselini ekleyebilirsin -->
+        <div>
+          <h1>Adın Soyadın</h1>
+          <p>Kısa bio / ünvan / #etiket</p>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://instagram.com/kullanici" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://x.com/kullanici" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://youtube.com/@kullanici" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:mail@ornek.com">E-posta</a>
+      </div>
+      <footer>© 2025 • Benim Linklerim</footer>
+    </div>
+  </div>
+</body>
+</html>
