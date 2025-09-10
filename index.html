@@ -99,7 +99,7 @@
 
   <!-- Müzik (gizli, otomatik çalan) -->
   <audio id="bg-music" autoplay loop hidden>
-    <source src="sarki.mp3" type="audio/mpeg">
+    <source src="missmebeat.mp3" type="audio/mpeg">
   </audio>
 
   <script>
@@ -109,10 +109,10 @@
     function toggleMute() {
       if (music.muted) {
         music.muted = false;
-        btn.textContent = "🔊 Ses Açık";
+        btn.textContent = "🔊";
       } else {
         music.muted = true;
-        btn.textContent = "🔇 Ses Kapalı";
+        btn.textContent = "🔇";
       }
     }
   </script>
