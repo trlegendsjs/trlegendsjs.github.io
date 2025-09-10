@@ -80,7 +80,7 @@
   <div class="overlay"></div>
 
   <!-- Ses kapatma butonu -->
-  <button class="mute-btn" onclick="toggleMute()">🔊 Ses Açık</button>
+  <button class="mute-btn" onclick="toggleMute()">🔊</button>
 
   <!-- Kart -->
   <div class="card">
@@ -99,23 +99,30 @@
   </div>
 
   <!-- Müzik (gizli, otomatik çalan) -->
-  <audio id="bg-music" autoplay loop hidden>
-    <source src="missmebeat.mp3" type="audio/mpeg">
-  </audio>
+<audio id="bg-music" loop>
+  <source src="missmebeat.mp3" type="audio/mpeg">
+</audio>
 
-  <script>
-    const music = document.getElementById("bg-music");
-    const btn = document.querySelector(".mute-btn");
+<script>
+  const music = document.getElementById("bg-music");
+  const btn = document.querySelector(".mute-btn");
 
-    function toggleMute() {
-      if (music.muted) {
-        music.muted = false;
-        btn.textContent = "🔊";
-      } else {
-        music.muted = true;
-        btn.textContent = "🔇";
-      }
+  // İlk tıklamada başlat
+  document.body.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().catch(err => console.log("Otomatik başlatma engellendi:", err));
     }
-  </script>
+  }, { once: true });
+
+  function toggleMute() {
+    if (music.muted) {
+      music.muted = false;
+      btn.textContent = "🔊";
+    } else {
+      music.muted = true;
+      btn.textContent = "🔇";
+    }
+  }
+ </script>
 </body>
 </html>
